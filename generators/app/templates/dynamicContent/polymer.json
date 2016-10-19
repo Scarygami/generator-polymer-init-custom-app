@@ -1,0 +1,17 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/<%= shell %>.html",
+  "fragments": [<% views.forEach(function(view){ %>
+    "src/<%= prefix %>-<%= view.route %>.html",<% }); %>
+    "src/<%= prefix %>-view404.html"
+  ],
+  "sourceGlobs": [
+   "src/**/*",
+   "images/**/*",
+   "bower.json"
+  ],
+  "includeDependencies": [
+    "manifest.json",
+    "bower_components/webcomponentsjs/webcomponents-lite.min.js"
+  ]
+}
